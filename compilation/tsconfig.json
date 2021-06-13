@@ -1,0 +1,28 @@
+{
+//  tsconfig.json 是TS编译器的配置文件
+  "include": [  //指定哪些TS文件需要编译  **:目录 *:文件
+    "./src/*"
+  ],
+  "exclude": [  //不需要编译的目录
+    "./src/index.ts"
+  ],
+  "compilerOptions": {  //编译器选项
+    "target": "es2015", //用来指定TS被编译为ES的版本
+    "module": "es2015",  //指定模块化的规范
+//    "lib": [] //指定项目中需要使用的库
+    "outDir": "./dist",  //指定编译后保存的目录
+//    "outFile": "" //将代码合并成一个文件
+    "allowJs": true, //是否对TS文件下的JS文件编译到dist目录  默认：false
+    "checkJs": true, //是否采用TS校验规则  默认：false
+    "removeComments": true,  //是否移除注释
+//    "noEmit": true  //不生成编译后的js文件
+    "noEmitOnError": true, //当有错误是不生成编译后的文件
+
+    //代码语法编译选项
+    "strict": true, //严格检查总开关
+    "alwaysStrict": true,  //编译后的文件是否使用严格模式 默认：false
+    "noImplicitAny": true, //不允许隐式的any 默认：false
+    "noImplicitThis": true, //不允许不明确的this 默认：false
+    "strictNullChecks": true //严格空值检查
+  }
+}
